@@ -1,4 +1,4 @@
-@import url("font-awesome.min.css");
+@import url("https://use.fontawesome.com/releases/v5.0.13/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600,600italic,700,700italic");
 
 /*
@@ -2155,13 +2155,6 @@
 				z-index: 1;
 			}
 
-			.image.icon:hover:before {
-				/* -moz-transform: translateZ(1em);
-				-webkit-transform: translateZ(1em);
-				-ms-transform: translateZ(1em);
-				transform: translateZ(1em); */
-			}
-
 			.image.icon:hover:after {
 				opacity: 1;
 			}
@@ -2170,22 +2163,20 @@
 		cursor: default;
 	}
 
+/* Paragraphs */
+
+  .quote-author{
+    float: right;
+  }
+
+  .about-image img{
+    width: 100%;
+  }
+  .about-image:after{
+    background: none;
+  }
+
 /* Icon */
-
-	.icon {
-		text-decoration: none;
-		border-bottom: none;
-		position: relative;
-	}
-
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
-		}
 
 		.icon > .label {
 			display: none;
