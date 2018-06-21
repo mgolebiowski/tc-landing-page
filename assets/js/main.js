@@ -38,6 +38,27 @@
 				);
 			});
 
-	});
+  });
+
+  $("form").submit(function(e){
+    e.preventDefault();
+    var $form = $("form");
+    var name = $form.find("input[name='name']").val();
+    var email = $form.find("input[name='email']").val();
+    var content = $form.find("textarea[name='message']").val();
+    if( name && email && content ){
+      var settings = {
+        type: 'POST',
+        data: {
+          name,
+          email,
+          content
+        }
+      };
+      $.ajax("email.php", settings).then((ret)=>{
+        $form.find("submit").val("Thanks!");
+      });
+    }
+  });
 
 })(jQuery);
