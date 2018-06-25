@@ -55,8 +55,8 @@
           content
         }
       };
-      $.ajax("email.php", settings).then((ret)=>{
-        $form.find("submit").val("Thanks!");
+      $.ajax("email.php", settings).then(_=>{
+        $form.find("input[type='submit']").val("Thanks!").prop('disabled', true);
       });
     }
   });
